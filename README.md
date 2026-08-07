@@ -131,7 +131,10 @@ Security is enforced in independent layers — Claude Code guard hooks, HTTP har
 
 ### Known `pnpm audit` findings (manual fix)
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> bcd7289 (docs: document manual fix for js-yaml/nanoid audit findings instead of override)
 `pnpm audit` currently flags two high-severity CVEs — both transitive, dev/build-time only, not runtime-reachable:
 
 | Package | Issue | Pulled in by |
