@@ -20,6 +20,7 @@ frontend/.turbo/
 firebase-debug.log
 firestore-debug.log
 ui-debug.log
+*.json
 
 # Build outputs
 frontend/dist/
@@ -57,3 +58,4 @@ docs/BOILERPLATE-BENCHMARK.md
 
 # Internal QA notes — not for the public repo
 docs/REPLICATION-LOG.md
+.env

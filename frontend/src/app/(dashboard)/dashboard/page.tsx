@@ -16,25 +16,80 @@ export default async function DashboardPage() {
   const greetingName = displayName ?? session?.email ?? null
 
   return (
-    <div className="space-y-6">
-      <div>
-        <h1 className="text-2xl font-bold tracking-tight">Dashboard</h1>
-        <p className="mt-1 text-sm text-zinc-500">
-          Welcome back{greetingName ? `, ${greetingName}` : ''}.
+    <div className="min-h-screen bg-white space-y-6 py-16">
+      <div className="text-center">
+        <p className="text-sm font-bold text-blue-600">
+          Team 1
+        </p>
+        <h1 className="mt-2 text-4xl font-bold tracking-tight text-black">
+          Responsible Content-Safety Infrastructure
+        </h1>
+        <p className="mt-1 text-sm text-zinc-400">
+          IBM X RMIT Capstone Project
+          {/* Welcome back{greetingName ? `, ${greetingName}` : ''}. */}
         </p>
       </div>
+      <h3 className="mt-2 text-2xl font-bold tracking-tight text-black">
+        Our Team
+      </h3>
+      <div className="grid gap-15 md:grid-cols-2 lg:grid-cols-3">
+        {[
+          {
+            name: 'Minh Dat Nguyen',
+            role: 'Project Manager',
+            description: 'Responsible for project coordination, timeline management, and stakeholder communication.',
+            photo: '/Team_Photos/image_PM.jpg',
+          },
+          {
+            name: 'Shriharish Muthumalai Arunkumar',
+            role: 'Business Analyst',
+            description: 'Focused on requirements analysis, documentation, and ensuring project goals align with business needs.',
+            photo: '/Team_Photos/image_BA.jpg',
+          },
+          {
+            name: 'Metric Harneet Kaur',
+            role: 'UX Designer',
+            description: 'Leading the interface design, user research, and ensuring a seamless, accessible user experience.',
+            photo: '/Team_Photos/image_UX.jpg',
+          },
+          {
+            name: 'Alexandre Lee',
+            role: 'Developer 1',
+            description: 'Primary developer responsible for the implementation of core features and system architecture. This is a long-blurb edge case example to demonstrate how the card expands vertically and allows text to wrap naturally without breaking the layout or truncating information.',
+            photo: '/Team_Photos/image_Dev1.jpg',
+          },
+          {
+            name: 'Kai Lek Kum',
+            role: 'Developer 2',
+            description: 'Supporting the development process with a focus on testing, deployment, and backend integration.',
+            photo: '/Team_Photos/image_Dev2.jpg',
+          },
+        ].map((member) => (
+          
+          <div key={member.name} className="w-64 rounded-xl border border-zinc-200 bg-white p-6 text-center shadow-sm">
+            <img
+              src={member.photo}
+              alt={member.name}
+              className="mx-auto h-24 w-24 rounded-full object-cover"
+            />
 
-      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-        {(['Metric One', 'Metric Two', 'Metric Three'] as const).map((title) => (
-          <div
-            key={title}
-            className="rounded-lg border border-zinc-200 bg-white p-6 shadow-sm dark:border-zinc-800 dark:bg-zinc-900"
-          >
-            <p className="text-sm font-medium text-zinc-500">{title}</p>
-            <p className="mt-2 text-3xl font-bold">—</p>
+            <h2 className="mt-4 text-lg font-bold text-black">
+              {member.name}
+            </h2>
+
+            <span className="mt-2 inline-block rounded-full bg-blue-100 px-3 py-1 text-sm font-bold text-blue-900">
+              {member.role}
+            </span>
+
+            <p className="mt-3 text-sm text-zinc-400">
+              {member.description}
+            </p>
           </div>
         ))}
       </div>
+      <footer className="bg-[#F3EBDD] px-6 py-6 text-center text-sm text-zinc-600">
+        © 2026 IBM × RMIT Capstone Project. All rights reserved.
+      </footer>
     </div>
   )
 }
