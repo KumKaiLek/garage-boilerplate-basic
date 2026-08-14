@@ -23,10 +23,10 @@ export default async function DashboardPage() {
           <h1 className="mt-2 text-3xl font-bold tracking-tight text-black sm:text-4xl">
             Responsible Content-Safety Infrastructure
           </h1>
-          <p className="mt-1 text-sm text-zinc-400">
-            IBM X RMIT Capstone Project
-            {/* Welcome back{greetingName ? `, ${greetingName}` : ''}. */}
-          </p>
+          <p className="mt-1 text-sm text-zinc-400">IBM X RMIT Capstone Project</p>
+          {greetingName && (
+            <p className="mt-1 text-sm text-zinc-500">Welcome back, {greetingName}.</p>
+          )}
         </div>
         <div>
           <h3 className="mb-6 text-2xl font-bold tracking-tight text-black">Our Team</h3>
