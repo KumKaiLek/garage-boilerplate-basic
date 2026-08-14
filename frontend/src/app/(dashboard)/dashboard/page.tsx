@@ -16,7 +16,7 @@ export default async function DashboardPage() {
   const greetingName = displayName ?? session?.email ?? null
 
   return (
-    <div className="min-h-screen bg-white py-16">
+    <div className="bg-white py-16">
       <div className="mx-auto max-w-6xl space-y-10 px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <p className="text-sm font-bold text-blue-600">Team 1</p>
