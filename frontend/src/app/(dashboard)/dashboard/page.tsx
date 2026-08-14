@@ -51,7 +51,7 @@ export default async function DashboardPage() {
                 role: 'UX Designer',
                 description:
                   'Leading the interface design, user research, and ensuring a seamless, accessible user experience.',
-                photo: '/Team_Photos/image_UX_missing.jpg',
+                photo: '/Team_Photos/image_UX.jpg',
               },
               {
                 name: 'Alexandre Lee',
